@@ -16,12 +16,9 @@ return new class extends Migration
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string("pencil");
-            $table->string("book");
-            $table->string("rule");
-            $table->integer("pencil-quantity");
-            $table->integer("rule-quantity");
-            $table->integer("book-quantity");
+            $table->integer("pencilqty");
+            $table->integer("ruleqty");
+            $table->integer("bookqty");
         });
     }
 
