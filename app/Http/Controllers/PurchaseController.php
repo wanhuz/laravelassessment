@@ -15,9 +15,9 @@ class PurchaseController extends Controller
         $i = 1;
 
         $attributes = request()->validate([
-            'username' => 'required',
-            'email' => 'required',
-            'mobile' => 'required',
+            'username' => 'required|min:3|max:255|unique:users,username',
+            'email' => 'required|email|max:255',
+            'mobile' => 'required|numeric|digits:10',
         ]);
 
         

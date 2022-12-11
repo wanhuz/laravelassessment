@@ -88,6 +88,14 @@
             <button style="margin-top: 15px;">Submit purchase</button>
         </form>
 
+        <ul>
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                    <li style="color:red;">{{ $error }}</li>
+                @endforeach
+            @endif
+        </ul>
+
 
 </body>
 </html>
